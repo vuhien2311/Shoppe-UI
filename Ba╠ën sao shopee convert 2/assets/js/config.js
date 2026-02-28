@@ -1,5 +1,5 @@
 window.ShopeeConfig = {
-  APP_VERSION: "2026.03.01.1",
+  APP_VERSION: "2026.03.01.2",
   BACKEND_BASE_URL: "https://bb46-2405-4803-ff61-5710-d9ad-de69-d39f-f541.ngrok-free.app",
   JOB_TIMEOUT_MS: 120000,
   JOB_POLL_MS: 400,

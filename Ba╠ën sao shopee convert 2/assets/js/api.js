@@ -48,7 +48,10 @@
     const res = await fetchWithTimeout(`${cfg.BACKEND_BASE_URL}/api/jobs`, {
       method: "POST",
       cache: "no-store",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "1"
+      },
       body: JSON.stringify({ url: rawUrl })
     });
 
@@ -65,7 +68,10 @@
     const stamp = Date.now();
     const url = `${cfg.BACKEND_BASE_URL}/api/jobs/${encodeURIComponent(jobId)}?_=${stamp}`;
     const res = await fetchWithTimeout(url, {
-      cache: "no-store"
+      cache: "no-store",
+      headers: {
+        "ngrok-skip-browser-warning": "1"
+      }
     });
     const data = await parseJsonSafe(res);
 
